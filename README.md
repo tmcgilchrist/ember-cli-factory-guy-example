@@ -13,3 +13,5 @@ This is my example of testing exmple [ember-cli](https://github.com/stefanpenner
 * `ember test`
 or
 * visit `localhost:4200/tests`
+
+https://travis-ci.org/tmcgilchrist/ember-cli-factory-guy-example.svg
