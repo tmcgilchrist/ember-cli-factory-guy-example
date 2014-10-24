@@ -33,3 +33,29 @@ test('Index', function() {
     equal($('.cars li:last').text(), "Toyota Car4");
   });
 });
+
+test('Delete', function() {
+  expect(2);
+
+  visit('/');
+  andThen(function() {
+    equal($('.cars li').length, 4, "Starting with 4 cars");
+  });
+  click('.delete-car');
+
+  andThen(function() {
+    equal($('.cars li').length, 3, "Should be 3 after deleting one.");
+  });
+});
+
+test('Create', function() {
+    expect(1);
+
+    visit('/');
+
+    click('.create-car');
+
+    andThen(function() {
+        equal($('.cars li').length, 5);
+    });
+});
