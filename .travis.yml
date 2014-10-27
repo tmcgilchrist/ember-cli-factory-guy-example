@@ -1,3 +1,4 @@
+---
 language: node_js
 
 sudo: false
@@ -5,8 +6,6 @@ sudo: false
 cache:
   directories:
     - node_modules
-    - bower_components
-    - vendor
 
 install:
   - npm install -g bower
@@ -14,4 +13,4 @@ install:
   - bower install
 
 script:
-  - ember test
+  - npm test
